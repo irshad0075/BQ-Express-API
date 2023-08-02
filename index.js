@@ -9,16 +9,16 @@ const brandRouter = require("./API/Brands/brandRoutes.js"); //done
 const app = express();
 app.use(express.json());
 
-// Set up MongoDB connection
-mongoose.connect(process.env.MONGO_URI);
-// Handle connection errors
-mongoose.connection.on("error", (err) => {
-  console.error("MongoDB connection error:", err.message);
-});
-// Handle successful connection
-mongoose.connection.once("open", () => {
-  console.log("DB Connected Successfully");
-});
+// // Set up MongoDB connection
+// mongoose.connect(process.env.MONGO_URI);
+// // Handle connection errors
+// mongoose.connection.on("error", (err) => {
+//   console.error("MongoDB connection error:", err.message);
+// });
+// // Handle successful connection
+// mongoose.connection.once("open", () => {
+//   console.log("DB Connected Successfully");
+// });
 
 // Categories Routes
 app.use("/api/categories", categoryRouter);

@@ -8,5 +8,4 @@ router.get('/get-brand-by-id' , getBrandByID)
 router.put('/update-brand' , updateBrand)
 router.delete('/delete-brand' , deleteBrand)
 
-
 module.exports = router;
